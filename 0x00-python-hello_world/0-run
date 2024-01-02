@@ -1,5 +1,4 @@
 #!/bin/bash
-
 PYFILE=$PYFILE
 if
 [ -f "$PYFILE" ]; then
