@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 42  # Replace 42 with your actual integer value
+number = 42
 print(f"{number} Battery street,")
