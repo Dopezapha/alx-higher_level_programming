@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This is a square class """
+""" This is a Square class """
 
-class square:
+class Square:
     pass
