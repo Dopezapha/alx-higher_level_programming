@@ -3,5 +3,7 @@
 
 
 class Square:
+    """ Implement Square """
+
     def __init__(self, size):
         """ Initialize a Square with a given size """
