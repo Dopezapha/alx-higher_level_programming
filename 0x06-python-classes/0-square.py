@@ -2,4 +2,4 @@
 """ A Square class """
 
 class Square:
-    pass
+    """ Implement Square """
