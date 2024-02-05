@@ -2,6 +2,6 @@
 
 def lookup(obj):
     """Definition of an object lookup"""
-    return [attribute for attribute in dir(obj)]
+    return dir(obj)
 
 """Returned a list of attributes"""
