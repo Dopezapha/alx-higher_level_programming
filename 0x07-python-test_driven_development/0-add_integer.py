@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""This module provides a function to add two integers."""
+"""This is a class add integer"""
 
 
 def add_integer(a, b=98):
-    """Adds two integers."""
-    if not isinstance(a, (int, float)):
-        raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
-        raise TypeError("b must be an integer")
-
+    """A function for integer addition"""
     return int(a) + int(b)
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testfile('add_integer_doctest.txt')
