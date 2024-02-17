@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""A class MyList that inherits from list"""
+"""defines class MyList"""
 
 
 class MyList(list):
-    """Child class Mylist"""
+    """class that inherits from list
+    with public instance method to print sorted list"""
 
     def print_sorted(self):
-        """Definition of sorted printed list"""
-        sorted_list = sorted(self)
-        print(sorted_list)
+        print(sorted(self))
