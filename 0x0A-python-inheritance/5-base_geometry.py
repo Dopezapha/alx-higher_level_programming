@@ -2,4 +2,4 @@
 """A class on BAseGeometry"""
 
 
-class BaseGeometry:
+class BaseGeometry():
