@@ -23,7 +23,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """Return the JSON serialization of a list of dicts."""
         if list_dictionaries is None or list_dictionaries == []:
-                return "[]"
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -57,7 +57,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Return a list of classes instantiated from a file of JSON strings."""
+        """Return a list of classes instantiated from a file of JSON str."""
         filename = str(cls.__name__) + ".json"
         try:
             with open(filename, "r") as jsonfile:
