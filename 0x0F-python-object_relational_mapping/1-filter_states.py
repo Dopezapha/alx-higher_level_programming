@@ -16,11 +16,11 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
     """Fetch all rows"""
-    rows = cur.fetchall()
+    states = cur.fetchall()
 
     """Print the states"""
-    for row in rows:
-        print(row)
+    for state in states:
+        print(state)
 
     """Close cursor and database connection"""
     cur.close()
