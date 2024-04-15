@@ -11,8 +11,8 @@ if __name__ == "__main__":
 
     """Create a cursor object"""
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name
-                LIKE 'N%' ORDER BY states.id ASC")
+    cur.execute("SELECT * FROM states WHERE name "
+                "LIKE 'N%' ORDER BY states.id ASC")
 
     """Fetch all rows"""
     states = cur.fetchall()
