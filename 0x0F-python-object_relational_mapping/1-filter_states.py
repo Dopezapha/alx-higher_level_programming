@@ -23,5 +23,5 @@ if __name__ == "__main__":
         print(state)
 
     """Close cursor and database connection"""
-    cur.close()
-    db.close()
+    #cur.close()
+    #db.close()
