@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 import MySQLdb
 import sys
+import os
 """a script that lists all states from the database hbtn_0e_0_usa"""
 
 
-def list_states(username, password, database):
+if __name__ == "__main__":
     """Connect to MySQL server"""
-    db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
+    db = MySQLdb.connect(host="localhost", port=3306, user="root",
+                         passwd="root", db="hbtn_0e_0_usa")
 
     """Create a cursor object"""
     cursor = db.cursor()
@@ -14,11 +16,11 @@ def list_states(username, password, database):
     """Execute the query to fetch all states"""
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
-    """Fetch all rows"""
-    states = cursor.fetchall()
+    """clear the console"""
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     """Print the states"""
-    for state in states:
+    for state in cursor.fetchall():
         print(state)
 
     """Close cursor and database connection"""
