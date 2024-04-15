@@ -16,17 +16,11 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states ORDER BY id ASC")
 
     """query states"""
-    states = cur.fetchall()
-
-    """Initialize a set to keep track of printed states"""
-    printed_state_names = set()
+    rows = cur.fetchall()
 
     """Print the states"""
-    for state in states:
-        state_name = state[1]
-        if state_name not in printed_state_names:
-            print(state)
-            printed_state_names.add(state_name)
+    for row in rows:
+        print(row)    
 
     """Close cursor and database connection"""
     cur.close()
