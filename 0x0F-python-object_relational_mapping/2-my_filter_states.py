@@ -13,9 +13,10 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     """Format and execute SQL query"""
-    query = ("SELECT * FROM states WHERE name = '{}' "
-             "ORDER BY states.id ASC").format(sys.argv[4])
-    cur.execute(query)
+    query = ("SELECT * FROM states WHERE name LIKE BINARY %s "
+             "ORDER BY states.id ASC")
+    state_name = sys.argv[4]
+    cur.execute(query, (state_name,))
 
     """Fetch all rows"""
     states = cur.fetchall()
