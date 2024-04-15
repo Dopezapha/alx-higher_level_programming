@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     """Print the cities"""
     for city in cities:
-        print("({})".format(", ".join(map(str, city))))
+        print(city)
 
     """Close cursor and database connection"""
     cur.close()
