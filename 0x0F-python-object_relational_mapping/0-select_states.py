@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     """Print the states"""
     for row in rows:
-        print(row)    
+        print(row)
 
     """Close cursor and database connection"""
     cur.close()
