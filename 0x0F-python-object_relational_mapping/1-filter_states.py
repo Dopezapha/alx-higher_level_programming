@@ -13,7 +13,7 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     """Execute the query to fetch states starting with 'N'"""
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC")
 
     """Fetch all rows"""
     states = cur.fetchall()
@@ -23,5 +23,5 @@ if __name__ == "__main__":
         print(state)
 
     """Close cursor and database connection"""
-    #cur.close()
-    #db.close()
+    cur.close()
+    db.close()
