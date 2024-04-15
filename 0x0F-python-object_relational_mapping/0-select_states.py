@@ -6,11 +6,11 @@ import sys
 
 if __name__ == "__main__":
     """Connect to MySQL server"""
-    conn = MySQLdb.connect(host="localhost", port=3306, user="root",
-                           passwd="root", db="hbtn_0e_0_usa")
+    db = MySQLdb.connect(host="localhost", port=3306, user="root",
+                         passwd="root", db="hbtn_0e_0_usa")
 
     """Create a cursor object"""
-    cur = conn.cursor()
+    cur = db.cursor()
 
     """Execute the query to fetch all states"""
     cur.execute("SELECT * FROM states ORDER BY id ASC")
@@ -30,4 +30,4 @@ if __name__ == "__main__":
 
     """Close cursor and database connection"""
     cur.close()
-    conn.close()
+    db.close()
